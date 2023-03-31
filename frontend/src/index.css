@@ -475,10 +475,10 @@ body {
   color: rgba(208, 206, 206, 1);
 }
 
-img {
+.logoimg {
   flex: 1;
   max-width: 100%;
-  height: 180px;
+  height: 100px;
   object-fit: contain;
   border-radius: 20px;
 }
@@ -915,7 +915,7 @@ color: white;
 .landingButtons{
  display:flex;
  flex-direction: row;
- margin-top:30px;
+ margin-top:170px;
  gap: 40px; 
  position: absolute;
  width: 350px;
@@ -930,8 +930,11 @@ color: white;
   font-size: 1.0rem;
   color:rgb(36,1,78);
   width:150px;
-  border-radius:20px;
-  background-color: white;
+  border-radius:12px;
+  background: #FFFFFF;
+  box-shadow: inset 5px 0px 10px 6px rgba(69, 69, 69, 0.25);
+  background: #1F79E5;
+  box-shadow: inset 5px 0px 10px 6px rgba(11, 59, 157, 0.32);
 }
 .landingStudent{
   font-weight: bold;
@@ -939,8 +942,7 @@ color: white;
   font-size: 1.0rem;
   color:#24014E;
   width:150px;
-  border-radius:20px;
-  background-color: white;
+  border-radius:12px;
 }
 .microscope{
   position: absolute;
@@ -964,19 +966,18 @@ color: white;
   height:60px;
  
 }
-.tab{
+.tab {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  padding: 15px 50px;
+  padding: 50px -3px;
   gap: 10px;
   position: absolute;
   width: 410px;
-  height: 50px;
-  left: 1000px;
-  top: 20px;
-
+  height: 44px;
+  left: 1109px;
+  top: 19px;
   background: #FCFCFC;
   border-radius: 25px 0px 0px 25px;
 }
@@ -1011,4 +1012,8 @@ font-weight: bold;
 }
 .nav li:hover{
 text-decoration:underline;
+}
+.subheading-landing{
+  margin: 20px 0px;
+  margin-left: 10%;
 }

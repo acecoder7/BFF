@@ -1,5 +1,5 @@
-import NavBar from "./Components/NavBar";
-import Content from "./Components/Content";
+import NavBar from "../components/NavBar";
+import Content from "../components/Content";
 
 
 function landingPage(){
