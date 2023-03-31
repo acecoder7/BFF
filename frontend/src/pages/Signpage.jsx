@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import "./Loginform.css";
-import Card from "../Card/Card";
+import "../components/Loginform.css";
+import Card from "../components/Card";
 import { FaGoogle } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { FaTwitter} from 'react-icons/fa';

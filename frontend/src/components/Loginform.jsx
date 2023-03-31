@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import "./Loginform.css";
-import Card from "../Card/Card";
+import Card from "./Card";
 import { FaGoogle } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { FaTwitter} from 'react-icons/fa';
-import {database} from '../../utils/database'
+// import {database} from '../../utils/database'
 
 
 const Loginform = () => {
@@ -37,18 +37,18 @@ const Loginform = () => {
     }
 
     //search for user credentials
-    const currentUser = database.find((user) => user.username === username);
+    // const currentUser = database.find((user) => user.username === username);
 
-    if(currentUser){
-      if(currentUser.password != password){
-        //wrong password
-        setErrorMessages({name:"password", message: errors.password});
-      }
-      else{
-        //correct password login user
-      }
+    // if(currentUser){
+    //   if(currentUser.password != password){
+    //     //wrong password
+    //     setErrorMessages({name:"password", message: errors.password});
+    //   }
+    //   else{
+    //     //correct password login user
+    //   }
 
-    }
+    // }
     else{
       //username doesn't exist in the database
       setErrorMessages({name:"Username", message: errors.username});
@@ -68,23 +68,23 @@ const Loginform = () => {
     <hr className="horizontal-line" />
     <form onSubmit={handleSubmit}>
         <div className='input_Container'>
-            <input type="text" placeholder='username' value={username} onChange={(e) => setUsername(e.target.value)} />
+            <input type="text" placeholder='Email' value={username} onChange={(e) => setUsername(e.target.value)} />
             {renderErrorMsg("username")}
             {renderErrorMsg("noUsername")}
-            <input type="password" placeholder='password' value={password} onChange={(e) => setPassword(e.target.value)} />
+            <input type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
             {renderErrorMsg("password")}
             {renderErrorMsg("noPassword")}
         </div>
-        <input type='submit' value="Log In" className='login_button' />
+        <input type='submit' value=".login()" className='login_button' style={{fontFamily: 'Cygnito Mono'}}/>
     </form>
     <div className='link_container'>
         <a href="" className='small'>
            Forgot password?
         </a>
     </div>
-    <div className='icons'><FaGoogle style={{ color: 'white', fontSize: '24px' }} />
-    <FaGithub style={{ color: 'white', fontSize: '24px' }} />
-    <FaTwitter style={{ color: 'white', fontSize: '24px' }} />
+    <div className='icons'><FaGoogle style={{ color: 'black', fontSize: '24px' }} />
+    <FaGithub style={{ color: 'black', fontSize: '24px' }} />
+    <FaTwitter style={{ color: 'black', fontSize: '24px' }} />
     </div>
 
 
