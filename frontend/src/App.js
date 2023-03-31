@@ -21,7 +21,7 @@ function App() {
         <Route path="/sheetsncourses" element={<SheetsnCourses />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        {/* <Route path="/landingpage" element={<LandingPage />} /> */}
+        <Route path="/landingpage" element={<LandingPage />} />
       </Routes>
     </>
   );
