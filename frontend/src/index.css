@@ -1,0 +1,859 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+/* layout */
+:root {
+  --primary: linear-gradient(195deg,rgb(199, 121, 247) , rgb(158, 7, 251) );
+  --error: #e7195a;
+  
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.mainlayout {
+  background: linear-gradient(180deg, #000000 0%, #031A7D 51.19%, #310A69 80.97%, #440784 100%);
+  margin: 0;
+  font-family: "Poppins";
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  
+  
+}
+
+/* SIDE BAR */
+.profile-heading{
+  color: #ffffff;
+  text-align: right;
+  top:10%;
+}
+.sidebar {
+  background-image: url('./assets/starry.png');/* black background color */
+  width: 15.726rem; /* width of the sidebar */
+  height: 97%; /* height of the sidebar */
+  position: fixed; /* make the sidebar fixed */
+  top: 2%; /* align the top of the sidebar to the top of the page */
+  left: 1%; /* align the left of the sidebar to the left of the page */
+  bottom:1%;
+  border-radius: 0.75rem; /* rounded radius for the bottom right corner */
+  background-color: rgb(0, 0, 0);
+  transition: left 0.5s ease;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    left: -200px; /* move the sidebar to the left by the width of the sidebar */
+  }
+}
+
+.profile-option,
+.generate-option,
+.request-option {
+  position: relative;
+  color: #ffffff; /* white text color */
+  padding: 24px 32px 8px;
+  text-align: left;
+  font-size: 16px; /* set the font size of the options */
+  cursor: pointer; /* add a pointer cursor to the options */
+  transition: background-color 0.3s ease; /* add transition property */
+  border-radius: 7px; /* add rounded corners */
+  padding: 8px 12px; /* reduce padding to make the box smaller */
+  width:200px;
+  
+  margin: 1.09375rem ;
+}
+
+
+.profile-option:hover,
+.generate-option:hover,
+.request-option:hover {
+  background-color: rgba(128, 128, 128, 0.5);; /* change the background color of the option on hover */
+  color: #ffffff; /* change the text color of the option on hover */
+  transition: color 0.3s ease;
+  border-radius: 7px; /* add rounded corners */
+  padding: 8px 12px; /* reduce padding to make the box smaller */
+  width:200px;
+}
+
+.profile-option:hover,
+.generate-option:hover,
+.request-option:hover,
+.profile-option:hover *:not(.sidebar-icon),
+.generate-option:hover *:not(.sidebar-icon),
+.request-option:hover *:not(.sidebar-icon) {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.profile h4 {
+  margin: 20px;
+  font-size: 18px;
+  /* font-weight: 600; */
+  color:rgba(106, 149, 244, 1);
+  font-family: 'Cygnito Mono';font-size: 22px;
+}
+
+.button-icon i {
+  font-size: 24px;
+}
+.option-left{
+  margin-left: 50px;
+}
+.atag{
+  text-decoration: none;
+  color:#ffffff;
+}
+#selectedbutton{
+ /* background: linear-gradient(195deg, rgb(73, 163, 241), rgb(26, 115, 232)); change the background color of the option on hover */
+  color: #ffffff; /* change the text color of the option on hover */
+  transition: color 0.3s ease;
+  border-radius: 7px; /* add rounded corners */
+  padding: 8px 12px; /* reduce padding to make the box smaller */
+  width:200px;
+  
+}
+#logoutbutton{
+  background: linear-gradient(195deg, rgb(73, 163, 241), rgb(26, 115, 232)); /* change the background color of the option on hover */
+  color: #ffffff; /* change the text color of the option on hover */
+  transition: color 0.3s ease;
+  border-radius: 7px; /* add rounded corners */
+  padding: 11px 7px; /* reduce padding to make the box smaller */
+  width:100px;
+  top:90%;
+  margin-left: 3%;
+  text-align: center;
+  font-weight: bold;
+  position: fixed;
+}
+.divider {
+  
+    border-top: 0px solid rgba(0, 0, 0, 0.08);
+    border-right: 0px solid rgba(0, 0, 0, 0.08);
+    border-left: 0px solid rgba(0, 0, 0, 0.08);
+    height: 0.0625rem;
+    margin: 1rem 0px;
+    border-bottom: none;
+    opacity: 1;
+    
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255), rgba(255, 255, 255, 0)) !important;
+}
+/*Profile Bar*/
+.profile-headingp{
+  color: #ffffff;
+  text-align: right;
+  top:10%;
+}
+.sidebarp {
+  background-image: url('./assets/starry.png');/* black background color */
+  width: 17.726rem; /* width of the sidebar */
+  height: 93.5%; /* height of the sidebar */
+  position: fixed; /* make the sidebar fixed */
+  top: 2%; /* align the top of the sidebar to the top of the page */
+  left: 10%; /* align the left of the sidebar to the left of the page */
+  bottom:1%;
+  border-radius: 0.75rem; /* rounded radius for the bottom right corner */
+  background-color: rgb(0, 0, 0);
+  transition: left 0.5s ease;
+}
+@media (max-width: 768px) {
+  .sidebarp {
+    left: -200px; /* move the sidebar to the left by the width of the sidebar */
+  }
+}
+
+.profile-optionp,
+.generate-optionp,
+.request-optionp {
+  position: relative;
+  color: #ffffff; /* white text color */
+  padding: 24px 32px 8px;
+  text-align: left;
+  font-size: 16px; /* set the font size of the options */
+  cursor: pointer; /* add a pointer cursor to the options */
+  transition: background-color 0.3s ease; /* add transition property */
+  border-radius: 7px; /* add rounded corners */
+  padding: 8px 12px; /* reduce padding to make the box smaller */
+  width:200px;
+  
+  margin: 1.09375rem ;
+}
+
+
+.profile-optionp:hover,
+.generate-optionp:hover,
+.request-optionp:hover {
+  background-color: rgba(128, 128, 128, 0.5);; /* change the background color of the option on hover */
+  color: #ffffff; /* change the text color of the option on hover */
+  transition: color 0.3s ease;
+  border-radius: 7px; /* add rounded corners */
+  padding: 8px 12px; /* reduce padding to make the box smaller */
+  width:200px;
+}
+
+.profile-optionp:hover,
+.generate-optionp:hover,
+.request-optionp:hover,
+.profile-optionp:hover *:not(.sidebar-icon),
+.generate-optionp:hover *:not(.sidebar-icon),
+.request-optionp:hover *:not(.sidebar-icon) {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+.profilep {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 10%;
+}
+
+.profilep img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.profilep h4 {
+  margin: 20px;
+  font-size: 18px;
+  /* font-weight: 600; */
+  color:rgba(106, 149, 244, 1);
+  font-family: 'Cygnito Mono';font-size: 22px;
+}
+
+.button-iconp i {
+  font-size: 24px;
+}
+.option-leftp{
+  margin-left: 50px;
+}
+.atagp{
+  text-decoration: none;
+  color:#ffffff;
+}
+#selectedbuttonp{
+ /* background: linear-gradient(195deg, rgb(73, 163, 241), rgb(26, 115, 232)); change the background color of the option on hover */
+  color: #ffffff; /* change the text color of the option on hover */
+  transition: color 0.3s ease;
+  border-radius: 7px; /* add rounded corners */
+  padding: 8px 12px; /* reduce padding to make the box smaller */
+  width:200px;
+  
+}
+
+.dividerp {
+  
+    border-top: 0px solid rgba(0, 0, 0, 0.08);
+    border-right: 0px solid rgba(0, 0, 0, 0.08);
+    border-left: 0px solid rgba(0, 0, 0, 0.08);
+    height: 0.0625rem;
+    margin: 1rem 0px;
+    border-bottom: none;
+    opacity: 1;
+    
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255), rgba(255, 255, 255, 0)) !important;
+}
+/*questions-solved*/
+.containerq {
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10%;
+
+}
+
+.left-columnq{
+  flex: 1;
+  min-width: 300px;
+  width:100px;
+  height: 250px;
+  background-color: #ffffff;
+  margin-right: 20px;
+  text-align: left;
+  background-image: url('./assets/starry.png');/* black background color */
+  background-color: rgb(0, 0, 0);
+  border-radius: 1em;
+}
+.right-columnq {
+  flex: 1;
+  min-width: 300px;
+  width:20px;
+  height:250px;
+  background-color: #ffffff;
+  text-align: left;
+  background-image: url('./assets/starry.png');/* black background color */
+  background-color: rgb(0, 0, 0);
+  border-radius: 1em;
+  
+}
+
+.bottom-rowq {
+  flex-basis: 100%;
+  margin-top: 20px;
+  background-color: #ffffff;
+  text-align: center;
+  height: 380px;
+  background-image: url('./assets/starry.png');/* black background color */
+  background-color: rgb(0, 0, 0);
+  border-radius: 1em;
+}
+
+@media only screen and (max-width: 768px) {
+  .left-columnq, .right-columnq {
+    min-width: 100%;
+  }
+}
+#editprofile{
+  color: #0d7597; /* change the text color of the option on hover */
+  transition: color 0.3s ease;
+  padding: 11px 7px; /* reduce padding to make the box smaller */
+  width:200px;
+  
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  background: rgba(25, 132, 255, 0.18);
+  border-radius: 7px;
+  right: 15%;
+}
+.social-media{
+    
+    margin-left:10%;
+    font-size: 12px;
+    display: absolute;
+    align-items: center;
+    
+    width: 300px;
+    
+  
+}
+.social-media-div{
+  margin-top: 20%;
+  margin-left:5%;
+}
+.icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;
+  font-size: 20px;
+  color: #fff;
+  
+}
+
+.icon i.fa-github {
+  color: #fff;
+}
+
+.icon i.fa-linkedin {
+  color: #0077b5;
+  background-color: #fff;
+}
+
+.skills{
+    
+  margin-left:10%;
+  font-size: 12px;
+  display: absolute;
+  align-items: center;
+  width: 300px;
+}
+.skills-dev{
+  left:5%;
+}
+.qrow{
+  text-align: left;
+  padding-left: 2%;
+  margin-left: 5%;
+  line-height:3em;
+  min-width: 100px;
+  width:500px;
+}
+/*Search Bar*/
+.search-bar-container {
+  position: absolute;
+  top: 0;
+  width: 48%;
+  
+  right:32%;
+}
+
+.search-container {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: rgba(108, 108, 108, 0.31);
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.search-container input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  outline: none;
+  background-color:rgba(108, 108, 108, 0.31);
+  border-radius: 0 0px 0px 0;
+}
+
+.search-container button {
+  padding: 10px 15px;
+  border: none;
+  background-color: rgba(108, 108, 108, 0.31);
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 0 0px 0px 0;
+}
+
+.search-container button:hover {
+  background-color: #666;
+}
+
+.search-container i {
+  font-size: 16px;
+}
+/*Add Buddies*/
+.welcome-back {
+  background-color:rgba(26, 133, 255, 1);
+  width:700px;
+  height:150px;
+  border-radius: 12px;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top:15%;
+  left:20%;
+}
+
+.welcome-header {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.welcome-header h2 {
+  margin: 0;
+  font-size: 32px;
+  color: rgba(208, 206, 206, 1);
+}
+
+.welcome-header p {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.4;
+  color: rgba(208, 206, 206, 1);
+}
+
+img {
+  flex: 1;
+  max-width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+
+.welcome-header img {
+  width: 200px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right:0%;
+}
+
+.welcome-back p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(208, 206, 206, 1);
+}
+/*add to network*/
+.add-buddies {
+  position: relative;
+  margin-top: 18%;
+  margin-right:12%;
+  background-color: #000;
+  text-align: center;
+  height: 420px;
+  background-image: url('./assets/starry.png');
+  border-radius: 12px;
+  width:740px;
+}
+
+.add-buddies h2 {
+  color: #fff;
+  font-size: 24px;
+  margin: 20px;
+}
+
+.divider {
+  width: 80%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 0 auto;
+}
+
+.buddy-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.buddy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.buddy-info {
+  display: flex;
+  align-items: center;
+}
+
+.buddy img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.buddy h3 {
+  color: #fff;
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+.add {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#bottom-butt{
+  
+  margin-bottom: 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-right: 20px;
+}
+#view{
+  background: linear-gradient(195deg, rgb(73, 163, 241), rgb(26, 115, 232)); /* change the background color of the option on hover */
+  
+}
+/*sheetsncourses*/
+.sheet-course{
+  display:flex;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 20%;
+  margin-right: 27%;
+}
+.sheet-progress {
+  background-image: url('./assets/starry.png');
+  width: 500px;
+  height: 150px;
+  background-position: center;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sheet-header {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-start;
+  text-align: left;
+  color: #fff;
+}
+/*Dashboard*/
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 700px;
+  height: 400px;
+  margin-right: 13%;
+  margin-bottom: 10%;
+  
+}
+
+.flex-item1 {
+  width: 400px;
+  height: 300px;
+  border-radius: 18px;
+  background-color: #000;
+  background-image: url('./assets/starry.png');
+  margin-bottom: 20px;
+  text-align: center;
+  justify-self: center;
+
+}
+.flex-item2 {
+  width: 280px;
+  height: 300px;
+  border-radius: 18px;
+  background-color: #000;
+  background-image: url('./assets/starry.png');
+  margin-bottom: 20px;
+
+}
+.flex-item3 {
+  width: 400px;
+  height: 300px;
+  border-radius: 18px;
+  background-color: #000;
+  background-image: url('./assets/starry.png');
+  margin-bottom: 20px;
+
+}
+.flex-item4 {
+  width: 280px;
+  height: 300px;
+  border-radius: 18px;
+  background-color: #000;
+  background-image: url('./assets/starry.png');
+  margin-bottom: 20px;
+
+}
+
+
+
+.sheet-header p {
+  margin: 10px 0 0 0;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.detail-button {
+  border: none;
+  background-color: transparent;
+  color: #1a85ff;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex-end;
+  align-items: right;
+}
+
+
+.detail-button i {
+  margin-left: 10px;
+}
+
+.course-progress {
+  background-image: url('./assets/starry.png');
+  width: 500px;
+  height: 150px;
+  background-position: center;
+  border-radius: 25px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.course-header {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-start;
+  text-align: left;
+  color: #fff;
+}
+
+.sheet-header h3 ,.course-header h3 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: normal;
+  
+}
+
+.course-header p {
+  margin: 10px 0 0 0;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.continue-button {
+  border: none;
+  background-color: transparent;
+  color: #1a85ff;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex-end;
+  align-items: right;
+}
+
+.continue-button i {
+  margin-left: 10px;
+}
+.chart{
+  margin-top:10%;
+  width: 90%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.messages {
+  position: relative;
+  text-align: left;
+  height: 420px;
+  border-radius: 12px;
+  width: 400px;
+  right: 5%;
+}
+
+.messages h2 {
+  color: #fff;
+  font-size: 24px;
+  margin-left: 50px;
+}
+
+.divider {
+  width: 80%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+ 
+}
+
+.messages ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.messages li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.messages .profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1px;
+}
+
+.messages .profile-img img {
+  width: 80%;
+  height: 80%;
+  
+}
+
+.messages .message-info {
+  flex: 1;
+}
+
+.messages .message-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.messages .message-header h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.messages .message-header .time {
+  font-size: 12px;
+}
+
+.messages p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+/*flexbox 2*/
+.completion-progress {
+  width: 300px;
+  height: 200px;
+  border-radius: 25px;
+  margin-top: 15%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+.completion-header {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-start;
+  text-align: left;
+  color: #fff;
+  padding: 10px;
+  
+}
+
+.completion-header h3 {
+  margin: 0;
+  text-align: left;
+}
+
+.completion-header h4 {
+  margin: 0 0 10px 0;
+}
+
+.completion-header p {
+  margin: 0;
+  font-size: 14px;
+}
+.dividerc {
+  
+  border-top: 0px solid rgba(0, 0, 0, 0.08);
+  border-right: 0px solid rgba(0, 0, 0, 0.08);
+  border-left: 0px solid rgba(0, 0, 0, 0.08);
+  height: 0.0625rem;
+  margin: 0.5rem 0px;
+  border-bottom: none;
+  opacity: 1;
+  
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255), rgba(255, 255, 255, 0)) !important;
+}
+
