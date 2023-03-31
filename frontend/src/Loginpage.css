@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
+body {
+  margin: 0;
+  font-family:'poppins','sans-serif';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.himanshi{
+  background: radial-gradient(88.28% 88.28% at 81.35% 50%, #125BBC 0%, #031A7D 30.52%, #000000 55.15%, #310A69 80.97%, #440784 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  backdrop-filter: blur(50px);
+  background-size: "cover";
+  background-repeat:no-repeat; 
+  justify-content: center;
+  display: flex;
+  min-height: 100vh;
+  align-items:center;
+}
