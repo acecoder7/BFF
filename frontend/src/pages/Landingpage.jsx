@@ -1,2 +1,14 @@
+import NavBar from "./Components/NavBar";
+import Content from "./Components/Content";
 
-export default App;
+
+function landingPage(){
+  return (
+    <div className="landingPage">
+    <NavBar/>
+    <Content/>
+    </div>
+  )
+}
+
+export default landingPage;
