@@ -28,7 +28,7 @@ import ApiFeatures from "../utils/apiFeatures.js";
 
 export const register = async (req, res) => {
   try {
-    const { email, password, name } = req.body;
+    const { email, password, name, codeforce_handle } = req.body;
     // const web3authProvider = web3auth.connect();
     // const solanaWallet = new SolanaWallet(web3authProvider);
     // const publicKey = await solanaWallet.getPublicKey();
@@ -47,7 +47,8 @@ export const register = async (req, res) => {
       email,
       password,
     //   solanaPublicKey,
-      name
+      name,
+      codeforce_handle
     });
 
     res.status(201).json({
@@ -388,7 +389,7 @@ export const resetPassword = async (req, res) => {
 
 //GetAll User
 export const getallUser = async (req, res) => {
-  const apiFeatures = new ApiFeatures(User.find({ role: "student" }), req.query)
+  const apiFeatures = new ApiFeatures(User.find(), req.query)
     .search()
     .filter();
   try {

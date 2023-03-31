@@ -23,7 +23,7 @@ const UserSchema = new mongoose.Schema(
       minlength: [6, "Password should be greater than 6 characters"],
     },
     plan:[{
-        course:[{
+        
             field:{
                 type: mongoose.Schema.Types.ObjectId,
                 ref: "Field",
@@ -37,8 +37,25 @@ const UserSchema = new mongoose.Schema(
                     type:Number,
                 }
             }]
-        }]
+        
     }],
+    connections: [
+      {
+        user: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "User",
+        },
+        status: {
+          type: String,
+          enum: ["pending", "accepted", "declined"],
+          default: "pending",
+        },
+      },
+    ],
+    codeforce_handle:{
+        type:String,
+        required: [true, "Please enter your codeforce handle"],
+    },
 
     // solanaPublicKey: {
     //     type: String,

@@ -8,7 +8,6 @@ export const createField = async (req, res) => {
   try {
     const newFieldData = {
       field: req.body.field,
-      subfield: null,
     };
 
     const field = await Field.create(newFieldData);
@@ -100,7 +99,12 @@ export const getField = async (req, res) => {
 export const addSubfield = async (req, res) => {
   try {
     const fieldId = req.params.fieldId;
-    const { subfield } = req.body;
+    // const { subfield } = req.body;
+    const subfieldName = req.body.subfield;
+
+    // Create the new subfield
+    const newSubfield = await SubField.create({ subfield: subfieldName, field:fieldId });
+    //console.log(newSubfield.id);
 
     // Check if the field exists
     const field = await Field.findById(fieldId);
@@ -108,21 +112,13 @@ export const addSubfield = async (req, res) => {
       return res.status(404).json({ message: "Field not found" });
     }
 
-    // Create the new subfield
-    const newSubfield = await SubField.create({
-      field: fieldId,
-      subfield,
-      resources:null,
-    });
-
     // Add the new subfield to the field's subfield array
-    field.subfield.push(newSubfield);
+    field.subfield.push(newSubfield.id);
     await field.save();
 
     res.status(201).json({
       success: true,
       message: "Subfield added successfully",
-      newSubfield,
     });
 
   } catch (error) {
